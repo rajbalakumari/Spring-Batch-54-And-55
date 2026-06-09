@@ -21,7 +21,7 @@ public class AppConfig {
 		dm.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		dm.setUrl("jdbc:mysql://localhost:3306/spring_jdbc_lab");
 		dm.setUsername("root");
-		dm.setPassword("Subham@123");
+		dm.setPassword("Root");(Change here Password)
 		return dm;
 	}
 
