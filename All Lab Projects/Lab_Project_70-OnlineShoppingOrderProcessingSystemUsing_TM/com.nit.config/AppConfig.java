@@ -28,7 +28,7 @@ public class AppConfig {
 		ds.setUrl("jdbc:mysql://localhost:3306/shoppingdb");
 
 		ds.setUsername("root");
-		ds.setPassword("Subham@123");
+		ds.setPassword("Root");(chnage here password)
 
 		return ds;
 	}
