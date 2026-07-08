@@ -1,0 +1,23 @@
+Enter Policy Number : 102
+Enter Customer Name : Raj Bala Kumari
+Enter Vehicle Number : 2563
+Enter Vehicle Model : Petrol
+Enter Manufacturing Year : 2
+
+Policy Types
+car
+bike
+commercial
+Enter Policy Type : Car
+
+===== POLICY DETAILS =====
+Policy Number         : 102
+Customer Name         : Raj Bala Kumari
+Vehicle Number        : 2563
+Vehicle Model         : Petrol
+Manufacturing Year    : 2
+Insurance Type : Car Insurance
+Premium Amount : ₹8000
+Coverage Amount  : ₹500000
+Policy Validity : 1 Year
+Policy Status         : Active
