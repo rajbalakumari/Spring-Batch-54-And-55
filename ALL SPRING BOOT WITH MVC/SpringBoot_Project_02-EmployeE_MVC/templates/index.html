@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 <meta charset="UTF-8">
-<title>Employee Management System</title>
+<title>Update Employee</title>
 
 <style>
 *{
@@ -13,38 +14,32 @@
 }
 
 body{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(-45deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb);
     background-size:400% 400%;
-    animation:gradientBG 12s ease infinite;
+    animation:gradient 12s ease infinite;
     overflow:hidden;
 }
 
-/* Animated Background */
-@keyframes gradientBG{
-    0%{
-        background-position:0% 50%;
-    }
-    50%{
-        background-position:100% 50%;
-    }
-    100%{
-        background-position:0% 50%;
-    }
+/* Animated Gradient */
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
-/* Floating Circles */
+/* Floating Background */
 body::before,
 body::after{
     content:"";
     position:absolute;
-    width:300px;
-    height:300px;
+    width:280px;
+    height:280px;
     border-radius:50%;
-    background:rgba(255,255,255,0.15);
+    background:rgba(255,255,255,.15);
     animation:float 8s ease-in-out infinite;
 }
 
@@ -61,29 +56,29 @@ body::after{
 
 @keyframes float{
     0%,100%{
-        transform:translateY(0px);
+        transform:translateY(0);
     }
     50%{
         transform:translateY(30px);
     }
 }
 
-/* Card */
+/* Glass Card */
+
 .container{
-    background:rgba(255,255,255,0.18);
+    width:450px;
+    padding:35px;
+    background:rgba(255,255,255,.18);
     backdrop-filter:blur(15px);
-    padding:50px;
     border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.3);
-    text-align:center;
-    animation:fadeIn 1.2s ease;
-    width:420px;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+    animation:fadeIn 1s ease;
 }
 
 @keyframes fadeIn{
     from{
         opacity:0;
-        transform:translateY(50px);
+        transform:translateY(40px);
     }
     to{
         opacity:1;
@@ -91,68 +86,77 @@ body::after{
     }
 }
 
-h1{
-    color:#fff;
-    margin-bottom:35px;
-    font-size:34px;
-    text-shadow:2px 2px 10px rgba(0,0,0,.3);
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    font-size:30px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.3);
 }
 
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+label{
+    display:block;
+    color:white;
+    font-weight:bold;
+    margin:12px 0 6px;
 }
 
-a{
-    text-decoration:none;
-    padding:14px 28px;
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.9);
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus{
+    transform:scale(1.03);
+    box-shadow:0 0 10px rgba(255,255,255,.8);
+}
+
+/* Update Button */
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:#ff9800;
     color:white;
     font-size:18px;
     font-weight:bold;
-    border-radius:50px;
-    transition:.4s;
-    position:relative;
-    overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* Add Button */
-.add{
-    background:#28a745;
+button:hover{
+    background:#e68900;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
 }
 
-/* View Button */
-.view{
-    background:#007bff;
+/* Bottom Links */
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
 }
 
-a:hover{
-    transform:translateY(-6px) scale(1.05);
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
-}
-
-a::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
-    background:rgba(255,255,255,.35);
-    transform:skewX(-30deg);
-    transition:.5s;
-}
-
-a:hover::before{
-    left:120%;
-}
-
-.footer{
-    margin-top:35px;
+.links a{
+    text-decoration:none;
     color:white;
-    font-size:15px;
-    opacity:.9;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#fff176;
+    transform:scale(1.05);
 }
 </style>
 
@@ -162,22 +166,47 @@ a:hover::before{
 
 <div class="container">
 
-    <h1>👨‍💼 Employee Management System</h1>
+    <h2>✏️ Update Employee</h2>
 
-    <div class="buttons">
+    <form th:action="@{/employee/update/{id}(id=${employee.id})}"
+          th:object="${employee}"
+          method="post">
 
-        <a class="add" th:href="@{/employee/add}">
-            ➕ Add Employee
-        </a>
+        <input type="hidden" th:field="*{id}">
 
-        <a class="view" th:href="@{/employee/all}">
-            📋 View Employees
-        </a>
+        <label>Employee Name</label>
+        <input type="text"
+               th:field="*{name}"
+               placeholder="Enter Employee Name"
+               required>
 
-    </div>
+        <label>Department</label>
+        <input type="text"
+               th:field="*{department}"
+               placeholder="Enter Department"
+               required>
 
-    <div class="footer">
-        Spring Boot • Thymeleaf • MVC
+        <label>Email</label>
+        <input type="email"
+               th:field="*{email}"
+               placeholder="Enter Email"
+               required>
+
+        <label>Mobile Number</label>
+        <input type="number"
+               th:field="*{mob_num}"
+               placeholder="Enter Mobile Number"
+               required>
+
+        <button type="submit">
+            🔄 Update Employee
+        </button>
+
+    </form>
+
+    <div class="links">
+        <a th:href="@{/employee/all}">📋 Employee List</a>
+        <a th:href="@{/}">🏠 Back to Home</a>
     </div>
 
 </div>
