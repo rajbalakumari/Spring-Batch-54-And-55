@@ -1,0 +1,134 @@
+Spring Boot:-Spring Boot is a Java Framework that makes it esier to
+create and run Java Apllication.
+
+It simplifies the the configuration and setup process,allowing
+developers to focus more on writing code for their application.
+
+->Spring Boot is a Module of Spring FrameWork.
+
+->It facilitates Rapid Application Development.
+
+->Spring Boot is an open source Java Framework used to create a 
+web appln.
+
+->it is developed by  Pivotal Team.
+
+->It is a combination of Spring Framework and Embeded servers.
+
+->The main goal of Spring Boot is is to reduce development,unit test,
+and integration test time and in Spring Boot there is no requirement
+for XML configuration.
+
+
+**Spring Boot follows a layered architecture:-
+->It consists of 4 layers:-
+1.Presentation layer:-It handles HTTP requests,authentication
+and JSON conversion.
+
+2.Business layer:-Contains Business logic,validation and
+authorization.
+
+
+3.Persistence Layer:-Manages database interactions using ORM 
+frameworks like Spring Data JPA.
+
+4.Database Layer:-Stores application data using relational
+database and NoSql database.
+-----------------------------------------------------------------
+Spring Boot Annotations:-
+SpringBoot provides so many annotations.
+->That simplify Java Enterprise application development.
+->Here are few examples:-
+1.@SpringBootApplication -> it combines @Configuration,
+@EnableAutoConfiguration,@ComponentScan
+->This annotation is Entry Point for Spring Boot
+
+2.@ComponentScan:-Scan the package for @Component,@Service to
+auto register the beans
+3.@Configuration:-Marks the class as a source of bean definitions
+4.@Bean :-Declares a bean manually in a @Configuration class
+5.@Autowired:-Automatically injects dependent beans
+6.@Service:-Specialization of @Component for service layer class
+7.@Repository:-DAO layer classes
+8.@Controller :-Used for Spring MVC controllers
+9.@RestController :-Combination of @Controller and @ResponseBody for
+RESTful services.
+-----------------------------------------------------------------
+Spring Boot Data JPA:-it simplifies working with relational
+databases using Java.
+eliminating much boilerplate code
+->We will use application.properties to write all database configuration.
+->and we have entity class also with@Entity annotation.
+->We have JpaRepository also which will have all CRUD Operation
+methods.
+----------------------------------------------------------------------------------------
+SPRING MVC WITH SPRING BOOT:-SPRING MVC IS A WEB FRAMEWORK BUILT ON THE CORE OF THE
+SPRING FRAMEWORK.
+IT HELPS DEVELOP WEB APPLN BY BY SEPARATING THE LOGIC INTO THREE LAYERS:-
+1.MODEL
+2.VIEW
+3.CONTROLLER
+->SPRING BOOT MAKES IT EASY TO CREATE SPRING MVC APPS BY AUTO-CONFIGURING EVERYTHING.
+->BENEFITS OF SPRING BOOT FOR MVC:-
+1.NO web.xml required
+2.Embeded server
+3.Auto-configuration
+4.Easy REST Api and web app development
+--------------------------------------------------------------------------------------
+SPRING SECURITY:-SPRING SECURITY IS A POWERFUL AND CUSTOMIZABLE AUTHENTICATION 
+AND ACCESS CONTROL FRAMEWORK FOR JAVA APPLN,EASILY SPRING BASED APPN.
+->IT PROVIDES :-
+1.AUTHENTICATION
+2.AUTHERIZATION
+3.PROTECTION AGAINST COMMON SECURITY THREATS
+->WE HAVE ANNOTATIONS LIKE @ENABLEWEBSECURITY,@CONFIGURATION,@BEAN
+->BY DEFAULT ALL ENDPOINTS ARE SECURED IN SPRINGBOOT
+->YOU GET A DEFAULT LOGIN FORM
+----------------------------------------------------------------------------------------
+WEB SERVICES:-Web Services are a way for two different applications to communicate 
+over the web using standard protocols.
+Char:-
+1.Platform Independent(Windows,Linux)
+2.Language Independent(Java client can talk to Python Server)
+3.Uses Standard protocols like HTTP,XML,JSON
+
+Types of Web Services:-
+1.SOAP:-Simple Object Access Protocol
+->USES XML to encode messages
+->Follow strict standards
+->Protocol Based
+->Slower and more complex
+->Used in enterprise appln(Banking,telecom)
+
+2.REST:-Representational State Transfer
+->Uses HTTP methods(GEt,POST,PUT,DELETE)
+->SEND/RECEIVE JSON OR XML(bUT USUALLY JSON)
+->LIGHTWEIGHT AND FASTER THEN SOAP
+->IT IS COMMONLY USED IN WEB AND MOBILE APPLN
+->A REST API IS A WEB SERVICE THAT FOLLOWS REST ARCHITECTURE PRINCIPLES.
+->IT ALLOWS SYSTEM TO COMMUNICATE OVER HTTP BY EXPOSING RESOURCES(DATA) VIA STANDARD METHOD.
+------------------------------------------------------------------------------
+SpringBoot Rest API CRUD operations(For Employee Management System)
+
+:-
+1.Get All students:->localhost:8080/students
+
+2.Get student based on id:->localhost:8080/student/1
+
+3.Create Student:->localhost:8080/student/add
+
+4.Update Student details:->localhost:8080/student/update/1
+
+5.Delete student based on id:->localhost:8080/student/delete/1
+-------------------------------------------------------------------------
+WHAT IS GIT?
+->GIT IS A DISTRIBUTED VERSION CONTROL SYSTEM THAT HELPS DEVELOPERS.
+->TO TRACK THE CODE CHANGES OVER TIME
+->COLLABORATE WITH TERMS
+->MANAGE DIFFERENET FEATURES USING BRANCHES.
+
+1.REPOSITOTY:-
+->A PROJECT  FOLDER TRACKED BY GIT.
+->WE CAN HAVE LOCAL REPO AND REMOTE REPO.
+2.COMMIT:-
+
