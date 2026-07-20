@@ -1,0 +1,61 @@
+1. Add Product
+--------------------------------------------
+Method: POST
+
+http://localhost:8080/product/add
+
+Body (JSON)
+
+{
+    "name":"Laptop",
+    "brand":"Dell",
+    "category":"Electronics",
+    "price":65000,
+    "quantity":5
+}
+2. Get All Products
+------------------------------------------
+Method: GET
+
+http://localhost:8080/product/all
+3. Get Product By ID
+--------------------------------------------
+Method: GET
+
+http://localhost:8080/product/1
+
+Replace 1 with the required product ID.
+
+4. Update Product
+------------------------------------------
+Method: PUT
+
+http://localhost:8080/product/update/1
+
+Body (JSON)
+
+{
+    "name":"Laptop",
+    "brand":"HP",
+    "category":"Electronics",
+    "price":70000,
+    "quantity":8
+}
+5. Delete Product
+-------------------------------------------
+Method: DELETE
+
+http://localhost:8080/product/delete/1
+
+Replace 1 with the product ID you want to delete.
+
+Summary
+--------------------------------------------
+Method	URL
+POST	  http://localhost:8080/product/add
+GET	    http://localhost:8080/product/all
+GET	    http://localhost:8080/product/{id}
+PUT	    http://localhost:8080/product/update/{id}
+DELETE  http://localhost:8080/product/delete/{id}
+
+These are all the CRUD API endpoints for your Product Management System.
