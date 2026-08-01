@@ -95,3 +95,43 @@ Delete Book
 DELETE
 http://localhost:8080/book/delete/1
 
+
+-----------------------------------------------
+4. LAPTOP APIs
+-----------------------------------------------
+Save Laptop
+----------------
+POST
+http://localhost:8080/laptop/save
+Body
+{
+    "brand":"Dell",
+    "processor":"Intel i7",
+    "price":85000
+}
+
+Get All Laptops
+-----------------
+GET
+http://localhost:8080/laptop/all
+
+Get Laptop By Id
+--------------------
+GET
+http://localhost:8080/laptop/1
+
+Update Laptop
+------------------
+PUT
+http://localhost:8080/laptop/update/1
+Body
+{
+    "brand":"HP",
+    "processor":"Intel i5",
+    "price":65000
+}
+
+Delete Laptop
+-----------------
+DELETE
+http://localhost:8080/laptop/delete/1
