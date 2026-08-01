@@ -135,3 +135,37 @@ Delete Laptop
 -----------------
 DELETE
 http://localhost:8080/laptop/delete/1
+
+
+-----------------------------------------------
+5. PRODUCT APIs
+-----------------------------------------------
+Save Product
+-----------------
+POST
+http://localhost:8080/product/save
+{
+    "productName":"Laptop",
+    "category":"Electronics",
+    "price":65000
+}
+
+Get Product By Id
+-------------------
+GET
+http://localhost:8080/product/1
+
+Get All Products
+-------------------
+GET
+http://localhost:8080/product/all
+
+Delete Product
+------------------
+DELETE
+http://localhost:8080/product/delete/1
+
+
+
+
+
