@@ -1,0 +1,12 @@
+1. Student APIs
+Save Student
+---------------
+POST
+
+http://localhost:8080/student/save
+Request Body
+{
+    "name":"Rahul",
+    "course":"Java",
+    "fee":25000
+}
