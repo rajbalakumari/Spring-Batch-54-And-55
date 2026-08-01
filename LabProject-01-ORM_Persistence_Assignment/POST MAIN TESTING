@@ -1,7 +1,7 @@
 Postman APIs
---------------------------------------
+----------------------------------------------
 1. Student APIs
-------------------
+----------------------------------------------
 Save Student
 -------------
 POST
@@ -12,9 +12,9 @@ Request Body
     "course":"Java",
     "fee":25000
 }
-
+-----------------------------------------------
 2. Employee APIs
-----------------------
+-----------------------------------------------
 Save Employee
 --------------------
 POST
@@ -49,8 +49,49 @@ Body
     "department":"HR",
     "salary":65000
 }
-
 Delete Employee
 ------------------
 DELETE
 http://localhost:8080/employee/delete/1
+
+
+-----------------------------------------------
+3. BOOK APIs
+-----------------------------------------------
+Save Book
+-----------------
+POST
+http://localhost:8080/book/save
+Request Body
+{
+    "bookName":"Spring Boot",
+    "authorName":"Rod Johnson",
+    "price":700
+}
+
+Get All Books
+-----------------
+GET
+http://localhost:8080/book/all
+
+Get Book By Id
+----------------
+GET
+http://localhost:8080/book/1
+
+Update Book
+----------------
+PUT
+http://localhost:8080/book/update/1
+Request Body
+{
+    "bookName":"Hibernate",
+    "authorName":"Gavin King",
+    "price":900
+}
+
+Delete Book
+----------------
+DELETE
+http://localhost:8080/book/delete/1
+
