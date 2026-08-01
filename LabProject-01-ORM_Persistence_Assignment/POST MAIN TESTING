@@ -1,8 +1,10 @@
+Postman APIs
+--------------------------------------
 1. Student APIs
+------------------
 Save Student
----------------
+-------------
 POST
-
 http://localhost:8080/student/save
 Request Body
 {
@@ -10,3 +12,45 @@ Request Body
     "course":"Java",
     "fee":25000
 }
+
+2. Employee APIs
+----------------------
+Save Employee
+--------------------
+POST
+
+http://localhost:8080/employee/save
+
+Body
+
+{
+    "employeeName":"Amit",
+    "department":"IT",
+    "salary":50000
+}
+Get All Employees
+------------------
+GET
+http://localhost:8080/employee/all
+
+Get Employee By ID
+-------------------
+GET
+http://localhost:8080/employee/1
+
+Update Employee
+-------------------
+PUT
+http://localhost:8080/employee/update/1
+Body
+
+{
+    "employeeName":"Rahul",
+    "department":"HR",
+    "salary":65000
+}
+
+Delete Employee
+------------------
+DELETE
+http://localhost:8080/employee/delete/1
