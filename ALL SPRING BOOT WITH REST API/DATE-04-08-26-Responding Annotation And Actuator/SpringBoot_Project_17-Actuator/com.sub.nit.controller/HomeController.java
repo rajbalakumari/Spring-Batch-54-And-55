@@ -18,7 +18,7 @@ public class HomeController {
 
     @GetMapping("/contact")
     public String contact() {
-        return "Contact: subhambehera04.03.2005@gmail.com";
+        return "Contact: rajbala2536@gmail.com";
     }
 
 }
