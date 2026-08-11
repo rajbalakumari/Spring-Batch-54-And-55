@@ -71,7 +71,7 @@ POST http://localhost:8082/resttemplate/employees
                          │                     │
                          │      MySQL          │
                          └──────────▲──────────┘
-                                        │
+                                    │
                     ┌───────────────┴───────────────┐
                     │                               │
                  WebClient                     RestTemplate
