@@ -1,0 +1,103 @@
+POST MAN APIS
+-------------
+Project 24 → Employee REST API  → 8080
+Project 25 → WebClient          → 8081
+Project 26 → RestTemplate       → 8082
+
+Project 1 — Employee REST API
+---------------------------------------
+Controller mapping:
+
+/employees
+Method	API	                                Purpose
+POST	http://localhost:8080/employees         Create
+GET	http://localhost:8080/employees	        Get all
+GET	http://localhost:8080/employees/1	Get by ID
+PUT	http://localhost:8080/employees/1	Update
+DELETE	http://localhost:8080/employees/1	Delete
+POST Body
+{
+    "name": "Subham",
+    "email": "subham@gmail.com",
+    "salary": 50000
+}
+
+Project 2 — WebClient
+-----------------------------------------
+Your controller mapping is:
+
+/webclient/employees
+Method	API	                                         Internally calls
+POST	http://localhost:8081/webclient/employees	POST :8080/employees
+GET	http://localhost:8081/webclient/employees	GET :8080/employees
+GET	http://localhost:8081/webclient/employees/1	GET :8080/employees/1
+PUT	http://localhost:8081/webclient/employees/1	PUT :8080/employees/1
+DELETE	http://localhost:8081/webclient/employees/1	DELETE :8080/employees/1
+POST
+POST http://localhost:8081/webclient/employees
+{
+    "name": "Subham",
+    "email": "subham@gmail.com",
+    "salary": 50000
+}
+
+Project 3 — RestTemplate
+----------------------------------------------
+Your Project 3 controller should use:
+
+/resttemplate/employees
+
+assuming you set the controller mapping to that.
+
+Method	API	                                         Internally calls
+POST	http://localhost:8082/resttemplate/employees	POST :8080/employees
+GET	http://localhost:8082/resttemplate/employees	GET :8080/employees
+GET	http://localhost:8082/resttemplate/employees/1	GET :8080/employees/1
+PUT	http://localhost:8082/resttemplate/employees/1	PUT :8080/employees/1
+DELETE	http://localhost:8082/resttemplate/employees/1	DELETE :8080/employees/1
+POST
+POST http://localhost:8082/resttemplate/employees
+{
+    "name": "Subham",
+    "email": "subham@gmail.com",
+    "salary": 50000
+}
+                          Complete Architecture
+                        -------------------------
+                         ┌─────────────────────┐
+                         │     PROJECT 1       │
+                         │  Employee REST API  │
+                         │       :8080         │
+                         │                     │
+                         │      MySQL          │
+                         └──────────▲──────────┘
+                                        │
+                    ┌───────────────┴───────────────┐
+                    │                               │
+                 WebClient                     RestTemplate
+                    │                               │
+                    │                               │
+          ┌─────────┴─────────┐           ┌─────────┴─────────┐
+          │    PROJECT 2      │           │    PROJECT 3      │
+          │    WebClient      │           │   RestTemplate    │
+          │      :8081        │           │      :8082        │
+          └───────────────────┘           └───────────────────┘
+
+                        In short
+                      -----------
+Project 1 :8080
+/employees
+----------------------
+Project 2 :8081
+/webclient/employees
+        ↓
+    WebClient
+        ↓
+Project 1 :8080
+-----------------------
+Project 3 :8082
+/resttemplate/employees
+        ↓
+   RestTemplate
+        ↓
+Project 1 :8080
