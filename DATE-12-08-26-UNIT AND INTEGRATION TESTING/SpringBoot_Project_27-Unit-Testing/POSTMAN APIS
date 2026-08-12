@@ -1,0 +1,36 @@
+1. Save Student
+
+POST http://localhost:8080/students/save
+{
+    "name": "RajBala",
+    "course": "Java",
+    "marks": 85
+}
+
+2. Get All Students
+
+GET http://localhost:8080/students/all
+
+3. Get Student By ID
+
+GET http://localhost:8080/students/1
+
+4. Update Student
+
+PUT http://localhost:8080/students/1
+{
+    "id": 1,
+    "name": "RajBala",
+    "course": "Spring Boot",
+    "marks": 95
+}
+
+5. Delete Student
+
+DELETE http://localhost:8080/students/1
+All URLs
+POST    http://localhost:8080/students/save
+GET     http://localhost:8080/students/all
+GET     http://localhost:8080/students/1
+PUT     http://localhost:8080/students/1
+DELETE  http://localhost:8080/students/1
