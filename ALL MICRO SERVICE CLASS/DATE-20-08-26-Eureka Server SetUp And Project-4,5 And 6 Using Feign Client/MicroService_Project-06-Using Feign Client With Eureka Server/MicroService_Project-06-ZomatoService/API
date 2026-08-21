@@ -1,0 +1,3 @@
+⚠️ WARNING: Before running this project, please start the Eureka Server Setup Project (Project No. 4) first, as this project needs to be registered with the Eureka Server.
+-----------
+http://localhost:8082/fooditems/101
