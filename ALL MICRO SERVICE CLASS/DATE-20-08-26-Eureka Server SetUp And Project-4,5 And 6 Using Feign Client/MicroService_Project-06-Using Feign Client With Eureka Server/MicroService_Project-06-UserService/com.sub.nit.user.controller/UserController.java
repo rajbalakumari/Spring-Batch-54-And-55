@@ -13,7 +13,7 @@ import com.sub.nit.user.entity.User;
 @RestController
 public class UserController {
 
-    User u = new User(101, "Subham");
+    User u = new User(101, "RajBala");
 
     @Autowired
     FoodItemClient client;
