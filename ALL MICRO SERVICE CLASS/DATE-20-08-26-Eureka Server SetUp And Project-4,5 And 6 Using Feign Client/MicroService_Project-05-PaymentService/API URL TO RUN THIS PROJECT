@@ -1,0 +1,4 @@
+⚠️ WARNING: Before running this project, please start the Eureka Server Setup Project (Project No. 4) first, as this project needs to be registered with the Eureka Server.
+-----------
+GET
+http://localhost:8081/payments
