@@ -1,0 +1,6 @@
+⚠️ WARNING: Before running this project, please follow these steps in order:
+
+▶️ First, run the Eureka Server Setup Project (Project No. 04), as this project needs to register with the Eureka Server.
+▶️ Next, run the ZomatoService Project No.06. it will be register with the Eureka Server.
+▶️ Finally, run this project.
+http://localhost:8083/user/1
